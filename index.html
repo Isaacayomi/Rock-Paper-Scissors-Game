@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.js" integrity="sha512-FSNQjUUq97PtDnAJyMlBTH8EhV4o5X5FLVbzS9ttrdEVVbmrssJBh/PgXFQbxS+6yYx5n5irOj7de6Th0TRQZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title> Rock, Paper, Scissors Web Game</title>
+  </head>
+  <body>
+    <section class="game__rule__section">
+      <div class="heading">
+        <p>RULE</p>
+        <img
+          src="./images/icon-close.svg"
+          alt="close-icon"
+          class="close__icon"
+        />
+      </div>
+      <img
+        src="./images/image-rules.svg"
+        alt="game-rules"
+        class="game__rules"
+      />
+    </section>
+    <main>
+      <section class="home__section">
+        <div class="score__tag">
+          <div class="heading">
+            <img src="./images/rpsheading.svg" alt="heading-img" />
+          </div>
+          <div class="score__section">
+            <p class="score__heading">SCORE</p>
+            <p class="score">0</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="step__1 icons__container">
+        <img
+          src="./images/icon-paper.svg"
+          alt="paper-icon"
+          class="paper__icon"
+        />
+        <img
+          src="./images/icon-scissors.svg"
+          alt="scissors-icon"
+          class="scissors__icon"
+        />
+        <img src="./images/icon-rock.svg" alt="rock-icon" class="rock__icon" />
+      </section>
+
+      <section class="step__2 gamers__decisions__menu">
+        <div class="player__choice">
+          <p class="player__choice__heading">YOU PICKED</p>
+          <div class="player__choice__img">
+            <img
+              src="./images/icon-scissors.svg"
+              alt="player-choice"
+              class="player__choice__image"
+            />
+          </div>
+        </div>
+
+        <div class="winner__decided">
+          <p class="game__decision">YOU WIN</p>
+          <button class="play__again__btn">PLAY AGAIN</button>
+        </div>
+
+        <div class="computer__choice">
+          <p class="computer__choice__heading">THE HOUSE PICKED</p>
+          <div class="computer__choice__img">
+            <img
+              src="./images/icon-paper.svg"
+              alt="computer-choice"
+              class="computer__choice__image"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="rules__section">
+      <p>RULES</p>
+    </section>
+
+    <script src="animation.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
