@@ -16,10 +16,10 @@ body {
   width: 100%;
   margin-inline: auto;
   height: 50rem;
+  position: relative;
 }
 
 main {
-  position: relative;
 }
 
 .game__rule__section .heading {
@@ -43,16 +43,14 @@ main {
   width: 100%;
   position: absolute;
   z-index: 10;
-  top: 20%;
-  left: 35%;
-  transform: translate(-20%, -35%);
-  /* margin-inline: auto; */
- 
+  top: 10%; /* Center vertically */
+  left: 33%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
   padding: 2rem;
-  display: none; 
-  height: 25.9375rem;
+  height: auto; /* Adjust height dynamically */
   background-color: white;
   transition: 0.2s linear;
+  display: none; /* Initially hidden */
 }
 
 .close__icon:hover {
@@ -262,6 +260,7 @@ section.step__1 {
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
+    position: relative;
   }
   .score__tag {
     max-width: 19.4375rem;
@@ -324,7 +323,7 @@ section.step__1 {
     box-shadow: none;
     transform: scale(1.5);
   }
-  
+
   .paper__icon {
     margin-left: -3rem;
     margin-top: -5rem;
@@ -359,14 +358,13 @@ section.step__1 {
     max-width: 8.08538rem;
     width: 100%;
   }
-  
-  .player__choice__image,
-.computer__choice__image {
-  max-width: 8.08538rem;
-  width: 100%;
-  height: auto;
-}
 
+  .player__choice__image,
+  .computer__choice__image {
+    max-width: 8.08538rem;
+    width: 100%;
+    height: auto;
+  }
 
   .player__choice,
   .computer__choice {
@@ -394,23 +392,35 @@ section.step__1 {
   }
 
   .game__rule__section {
-    width: 100%;
-    /* margin-inline:1rem; */
-    margin-top: 0;
-    position: absolute;
-    height: 100vh;
-    left: 3%;
-    top: 0;
-    
-    /* top: 20%;
-    left: 25%;
-    transform: translate(-20%, 25%); */
-    z-index: 10;
+    width: 90%; /* Adjust width for smaller screens */
+    height: auto;
+    padding: 1.5rem;
+    top: 10%; /* Center vertically */
+    left: 25%; /* Center horizontally */
+    transform: translate(-50%, -50%);
   }
 
   .game__rules {
     max-width: 85.374rem;
     width: 100%;
     margin-inline: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  }
+  .game__rule__section {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 10;
   }
 }

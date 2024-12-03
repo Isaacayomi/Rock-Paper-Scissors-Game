@@ -61,7 +61,7 @@ const handleComputerChoice = () => {
     translateX: [-500, 0],
     opacity: [0, 1],
     easing: "easeOutExpo",
-    delay: 300,
+    delay: 500,
   });
   console.log(`Computer Game: ${computerChoice}`);
 };
@@ -103,9 +103,9 @@ const handleGameLogic = () => {
     opacity: [0, 1],
     translateY: [500, 0],
     easing: "easeOutExpo",
-    delay: 400,
+    delay: 600,
   });
-  
+
   if (computerChoice === "PAPER") {
     if (playerChoice === "PAPER") {
       gameResult = "TIE";
