@@ -12,5 +12,5 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 
 ## Links
 
-- Solution URL: [https://github.com/Isaacayomi/Todo-App](https://github.com/Isaacayomi/Todo-App)
-- Live Site URL: [https://prime-todo-app.vercel.app/](https://prime-todo-app.vercel.app/)
+- Solution URL: [https://github.com/Isaacayomi/Rock-Paper-Scissors-Game](https://github.com/Isaacayomi/Rock-Paper-Scissors-Game)
+- Live Site URL: [https://prime-rps-game.vercel.app/](https://prime-rps-game.vercel.app/)

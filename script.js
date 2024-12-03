@@ -56,10 +56,25 @@ const handleComputerChoice = () => {
     computerChoice = "SCISSORS";
     computerChoiceImage.src = "./images/icon-scissors.svg";
   }
+  anime({
+    targets: ".computer__choice__image",
+    translateX: [-500, 0],
+    opacity: [0, 1],
+    easing: "easeOutExpo",
+    delay: 300,
+  });
   console.log(`Computer Game: ${computerChoice}`);
 };
 
 const handlePlayerChoice = (e) => {
+  anime({
+    targets: ".player__choice__image",
+    opacity: [0, 1],
+    translateX: [-500, 0],
+    easing: "easeOutExpo",
+    delay: 300,
+  });
+
   handleComputerChoice();
   if (e.target.classList.contains("rock__icon")) {
     playerChoice = "ROCK";
@@ -83,6 +98,14 @@ const handlePlayerChoice = (e) => {
 };
 
 const handleGameLogic = () => {
+  anime({
+    targets: ".winner__decided",
+    opacity: [0, 1],
+    translateY: [500, 0],
+    easing: "easeOutExpo",
+    delay: 400,
+  });
+  
   if (computerChoice === "PAPER") {
     if (playerChoice === "PAPER") {
       gameResult = "TIE";

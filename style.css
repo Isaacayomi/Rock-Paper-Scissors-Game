@@ -16,6 +16,9 @@ body {
   width: 100%;
   margin-inline: auto;
   height: 50rem;
+}
+
+main {
   position: relative;
 }
 
@@ -36,11 +39,18 @@ body {
 }
 
 .game__rule__section {
-  padding: 2rem;
-  display: none;
+  max-width: 25rem;
+  width: 100%;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, 30%);
+  z-index: 10;
+  top: 20%;
+  left: 35%;
+  transform: translate(-20%, -35%);
+  /* margin-inline: auto; */
+ 
+  padding: 2rem;
+  display: none; 
+  height: 25.9375rem;
   background-color: white;
   transition: 0.2s linear;
 }
@@ -249,12 +259,10 @@ section.step__1 {
     0 0 5px 105px rgba(255, 255, 255, 0.03);
 }
 
-@media screen and (max-width: 699px) {
-  /* body {
-    height: 100vh;
-    overflow: hidden;
-  } */
-
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   .score__tag {
     max-width: 19.4375rem;
     width: 100%;
@@ -295,6 +303,10 @@ section.step__1 {
     width: 100%;
   }
 
+  .step__2 {
+    gap: 9rem;
+  }
+
   .paper__icon,
   .rock__icon,
   .scissors__icon {
@@ -305,31 +317,14 @@ section.step__1 {
     width: 100%;
     height: 8.3125rem;
   }
+
   .paper__icon:hover,
   .rock__icon:hover,
   .scissors__icon:hover {
     box-shadow: none;
     transform: scale(1.5);
   }
-
-  .paper__icon:hover,
-  .rock__icon:hover,
-  .scissors__icon:hover {
-    animation: scale-up-down 1s ease-in-out; /* Animates the scale effect */
-  }
-
-  @keyframes scale-up-down {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
+  
   .paper__icon {
     margin-left: -3rem;
     margin-top: -5rem;
@@ -390,7 +385,7 @@ section.step__1 {
 
   .winner__decided {
     position: absolute;
-    top: 60%;
+    top: 80%;
   }
 
   .rules__section {
@@ -399,14 +394,18 @@ section.step__1 {
   }
 
   .game__rule__section {
-    margin-inline: auto;
-    /* width: 100%; */
-    width: 100vw;
+    width: 100%;
+    /* margin-inline:1rem; */
+    margin-top: 0;
     position: absolute;
-    height: 46.875rem;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    z-index: 9;
+    height: 100vh;
+    left: 3%;
+    top: 0;
+    
+    /* top: 20%;
+    left: 25%;
+    transform: translate(-20%, 25%); */
+    z-index: 10;
   }
 
   .game__rules {
