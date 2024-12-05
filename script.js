@@ -9,6 +9,7 @@ const rockIcon = document.querySelector(".rock__icon");
 const paperIcon = document.querySelector(".paper__icon");
 const scissorsIcon = document.querySelector(".scissors__icon");
 let parentContainer = document.querySelector(".icons__container");
+const playButton = document.querySelector(".play__button");
 
 // GET SRC ATTRIBUTE
 let playerChoiceIcon = "";
@@ -175,14 +176,32 @@ const playAgain = () => {
   computerChoiceImage.classList.remove("addRadicalBg");
 };
 
+const soundEffect = new Audio("sound/game-sound.mp3");
+const playBackgroundSound = () => {
+  soundEffect.play();
+  soundEffect.volume = 0.1;
+  soundEffect.loop = true;
+};
+
+const pauseBackgroundSound = () => {
+  soundEffect.pause();
+};
+
+playBackgroundSound();
+playButton.addEventListener("click", function () {
+  if (!soundEffect.paused) {
+    pauseBackgroundSound();
+  } else {
+    soundEffect.play();
+  }
+});
+
 parentContainer.addEventListener("click", (e) => {
   e.preventDefault();
   handlePlayerChoice(e);
   handleGameLogic();
 });
-rulesButton.addEventListener("click", function () {
-  toggleRulesDiagram();
-});
+rulesButton.addEventListener("click", toggleRulesDiagram);
 // rulesButton.addEventListener("click", toggleRulesDiagram);
 closeIcon.addEventListener("click", toggleRulesDiagram);
 playAgainButton.addEventListener("click", playAgain);

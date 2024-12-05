@@ -23,6 +23,23 @@ main {
   position: relative;
 }
 
+.play__button {
+  margin-right: 1rem;
+  position: absolute;
+  margin-top: -1.7rem;
+  right: 0;
+  z-index: 99;
+  max-width: 1rem;
+  width: 100%;
+  box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  border: none;
+}
+
+.play__button:hover {
+  cursor: pointer;
+}
+
 .game__rule__section .heading {
   display: flex;
   align-items: center;
@@ -45,7 +62,7 @@ main {
   z-index: 9;
   position: absolute;
   top: 30%;
-  left: 30%;
+  left: 35%;
   transform: translate(-50%, 50%);
   max-width: 25rem;
   width: 100%;
@@ -415,5 +432,14 @@ main {
     transform: translateX(-50%);
     width: 80%;
     z-index: 10;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  body {
+    position: relative;
+    display: grid;
+    place-content: center;
+    height: 100vh;
   }
 }
