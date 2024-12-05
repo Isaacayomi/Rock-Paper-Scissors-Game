@@ -13,10 +13,11 @@ body {
     #131537 100%
   );
   background-repeat: no-repeat;
+  background-size: cover;
   max-width: 85.375rem;
   width: 100%;
   margin-inline: auto;
-  height: 50rem;
+  /* height: 100%; */
 }
 
 main {
@@ -160,7 +161,7 @@ main {
 }
 
 .scissors__icon {
-  margin-top: -3rem;
+  margin-top: -5rem;
   margin-left: 6rem;
   border-radius: 50%;
 }
@@ -281,7 +282,7 @@ main {
   body {
     overflow-x: hidden;
     position: relative;
-    height: 70rem;
+    height: 100vh;
   }
 
   .score__tag {
@@ -347,7 +348,7 @@ main {
 
   .paper__icon {
     margin-left: -3rem;
-    margin-top: -5rem;
+    margin-top: -4rem;
     padding-right: 2rem;
   }
 
@@ -420,15 +421,15 @@ main {
 }
 
 @media screen and (max-width: 600px) {
-  main {
+  body {
     position: relative;
     height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
   }
 
   .game__rule__section {
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh; */
+    /* width: 100vw; */
     position: absolute;
     top: 20px;
     left: 10%;

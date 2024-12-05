@@ -13,11 +13,3 @@ anime({
   easing: "easeOutExpo",
   delay: 400,
 });
-
-anime({
-  targets: ".score",
-  opacity: [0, 1],
-  translateY: [1000, 0],
-  easing: "easeOutExpo",
-  delay: 500,
-});
