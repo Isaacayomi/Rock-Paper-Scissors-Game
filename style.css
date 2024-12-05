@@ -34,10 +34,13 @@ main {
   box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.05);
   border-radius: 50%;
   border: none;
+  transition: .2s linear;
 }
 
 .play__button:hover {
   cursor: pointer;
+  box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.05),
+    0 0 10px 20px rgba(255, 255, 255, 0.02);
 }
 
 .game__rule__section .heading {
