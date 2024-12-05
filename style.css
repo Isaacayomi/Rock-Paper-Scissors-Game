@@ -12,21 +12,24 @@ body {
     #1f3757 0%,
     #131537 100%
   );
+  background-repeat: no-repeat;
   max-width: 85.375rem;
   width: 100%;
   margin-inline: auto;
   height: 50rem;
-  position: relative;
 }
 
 main {
+  position: relative;
 }
 
 .game__rule__section .heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 1rem;
   padding-bottom: 3rem;
+  padding-inline: 1rem;
 }
 
 .game__rule__section .heading p {
@@ -39,18 +42,22 @@ main {
 }
 
 .game__rule__section {
+  z-index: 9;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, 50%);
   max-width: 25rem;
   width: 100%;
-  position: absolute;
-  z-index: 10;
-  top: 10%; /* Center vertically */
-  left: 33%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust for exact centering */
-  padding: 2rem;
-  height: auto; /* Adjust height dynamically */
   background-color: white;
   transition: 0.2s linear;
-  display: none; /* Initially hidden */
+  padding-bottom: 1rem;
+}
+
+.game__rule__section .game__rules {
+  margin-top: 0;
+  padding-top: 0;
+  padding-left: 2.5rem;
 }
 
 .close__icon:hover {
@@ -104,10 +111,6 @@ main {
   line-height: 4rem;
 }
 
-section.step__1 {
-  /* display: none; */
-}
-
 .step__1 {
   max-width: 29.75rem;
   width: 100%;
@@ -157,6 +160,7 @@ section.step__1 {
   border: 1px solid #fff;
   margin-top: 8rem;
   margin-right: 2rem;
+  margin-bottom: 2rem;
 }
 
 .rules__section:hover {
@@ -244,11 +248,7 @@ section.step__1 {
   cursor: pointer;
 }
 
-.winner__decided {
-  /* display: none; */
-}
-
-/* Winner blur effect */
+/* Winner background effect */
 
 .addRadicalBg {
   border-radius: 50%;
@@ -257,11 +257,13 @@ section.step__1 {
     0 0 5px 105px rgba(255, 255, 255, 0.03);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   body {
     overflow-x: hidden;
     position: relative;
+    height: 70rem;
   }
+
   .score__tag {
     max-width: 19.4375rem;
     width: 100%;
@@ -309,7 +311,6 @@ section.step__1 {
   .paper__icon,
   .rock__icon,
   .scissors__icon {
-    /* display: none; */
     padding: 0;
     margin: 0;
     max-width: 8.125rem;
@@ -340,21 +341,13 @@ section.step__1 {
     margin-top: 4rem;
     padding-bottom: 2rem;
   }
-  /* 
-  .player__choice__image,
-  .computer__choice__image {
-    max-width: 8.08538rem;
-    width: 100%;
-  } */
 
   .computer__choice .computer__choice__image {
-    /* border: 1px solid black; */
     max-width: 8.08538rem;
     width: 100%;
   }
 
   .player__choice .player__choice__image {
-    /* border: 1px solid red; */
     max-width: 8.08538rem;
     width: 100%;
   }
@@ -387,20 +380,19 @@ section.step__1 {
   }
 
   .rules__section {
-    margin-top: 15rem;
     margin-inline: auto;
   }
 
   .game__rule__section {
-    width: 90%; /* Adjust width for smaller screens */
-    height: auto;
-    padding: 1.5rem;
-    top: 10%; /* Center vertically */
-    left: 25%; /* Center horizontally */
-    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    transform: translate(-50%, 50%);
   }
 
-  .game__rules {
+  .game__rule__section .game__rules {
+    padding-left: 0;
+    padding: 0;
     max-width: 85.374rem;
     width: 100%;
     margin-inline: auto;
@@ -413,6 +405,7 @@ section.step__1 {
     height: 100vh;
     width: 100vw;
   }
+
   .game__rule__section {
     height: 100vh;
     width: 100vw;

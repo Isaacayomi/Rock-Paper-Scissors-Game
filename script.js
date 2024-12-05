@@ -32,15 +32,22 @@ let gameDecision = document.querySelector(".game__decision");
 
 let gameScore = 0;
 
+main.addEventListener("click", () => (rulesDiagram.style.display = "none"));
+
+rulesDiagram.style.display = "none";
 const toggleRulesDiagram = () => {
+  anime({
+    targets: ".game__rule__section",
+    opacity: [0, 1],
+    scale: [0.5, 1],
+  });
+
   if (rulesDiagram.style.display === "none") {
     rulesDiagram.style.display = "block";
   } else {
     rulesDiagram.style.display = "none";
   }
 };
-
-main.addEventListener("click", () => (rulesDiagram.style.display = "none"));
 
 const handleComputerChoice = () => {
   const randomMove = Math.random();
@@ -93,7 +100,6 @@ const handlePlayerChoice = (e) => {
   playersChoiceMenu.style.display = "flex";
   homeMenu.style.display = "none";
   winnerDecided.style.opacity = 100;
-
   console.log(`Player Game: ${playerChoice}`);
 };
 
@@ -161,11 +167,9 @@ const handleGameLogic = () => {
 };
 
 const playAgain = () => {
-  // playAgainButton.style.color = "#3B4262";
   playersChoiceMenu.style.display = "none";
   homeMenu.style.display = "flex";
   winnerDecided.style.opacity = 0;
-  // playAgainButton.style.color = "#db2e4d";
 
   playerChoiceImage.classList.remove("addRadicalBg");
   computerChoiceImage.classList.remove("addRadicalBg");
@@ -176,6 +180,9 @@ parentContainer.addEventListener("click", (e) => {
   handlePlayerChoice(e);
   handleGameLogic();
 });
-rulesButton.addEventListener("click", toggleRulesDiagram);
+rulesButton.addEventListener("click", function () {
+  toggleRulesDiagram();
+});
+// rulesButton.addEventListener("click", toggleRulesDiagram);
 closeIcon.addEventListener("click", toggleRulesDiagram);
 playAgainButton.addEventListener("click", playAgain);
