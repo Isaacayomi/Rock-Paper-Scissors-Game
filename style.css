@@ -12,12 +12,9 @@ body {
     #1f3757 0%,
     #131537 100%
   );
-  background-repeat: no-repeat;
-  background-size: cover;
   max-width: 85.375rem;
   width: 100%;
   margin-inline: auto;
-  /* height: 100%; */
 }
 
 main {
@@ -282,7 +279,6 @@ main {
   body {
     overflow-x: hidden;
     position: relative;
-    height: 100vh;
   }
 
   .score__tag {
